@@ -1,0 +1,9 @@
+diff a/carpeta/cineapp/pom.xml b/carpeta/cineapp/pom.xml	(rejected hunks)
+@@ -9,6 +9,7 @@
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-webmvc</artifactId>
++			<version>5.2.4.RELEASE</version>
+ 		</dependency>
+   </dependencies>
+   
