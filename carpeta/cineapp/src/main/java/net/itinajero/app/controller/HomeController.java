@@ -1,5 +1,8 @@
 package net.itinajero.app.controller;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,5 +28,19 @@ public class HomeController {
 		modelo.addAttribute("precio", precioEntrada);
 		
 		return "detalle";
+	}
+	
+	@RequestMapping(value="/", method=RequestMethod.GET)
+	public String mostrarPrincipal(Model vista) {
+		
+		List<String> peliculas = new LinkedList<>();
+		
+		peliculas.add("Rapidos y Furiosos");
+		peliculas.add("Pinocho");
+		peliculas.add("El maquinista");
+		
+		vista.addAttribute("peliculas", peliculas);
+		
+		return "home";
 	}
 }
