@@ -83,12 +83,13 @@ public class HomeController {
 			lista.add(pelicula2);
 			lista.add(pelicula3);
 			
-			
+			return lista;
 			
 		}catch(ParseException e){
 			System.out.println("Peto: "+e);
+			return null;
 		}
 		
-		return lista;
+		
 	}
 }
