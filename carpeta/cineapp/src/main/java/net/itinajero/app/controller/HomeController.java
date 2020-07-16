@@ -37,11 +37,7 @@ public class HomeController {
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String mostrarPrincipal(Model vista) {
 		
-		List<String> peliculas = new LinkedList<>();
-		
-		peliculas.add("Rapidos y Furiosos");
-		peliculas.add("Pinocho");
-		peliculas.add("El maquinista");
+		List<Pelicula> peliculas = getLista();
 		
 		vista.addAttribute("peliculas", peliculas);
 		
