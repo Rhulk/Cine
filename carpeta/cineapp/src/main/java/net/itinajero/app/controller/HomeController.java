@@ -38,9 +38,7 @@ public class HomeController {
 	public String mostrarPrincipal(Model vista) {
 		
 		List<Pelicula> peliculas = getLista();
-		
 		vista.addAttribute("peliculas", peliculas);
-		
 		return "home";
 	}
 	
@@ -58,6 +56,8 @@ public class HomeController {
 			pelicula1.setDuracion(120);
 			pelicula1.setGenero("Acción");
 			pelicula1.setFechaEstreno(formatear.parse("02-03-2001"));
+			pelicula1.setImagen("power_ranger.jpg");
+			pelicula1.setEstatus("activo");
 			
 			Pelicula pelicula2 = new Pelicula();
 			pelicula2.setId(2);
@@ -66,6 +66,8 @@ public class HomeController {
 			pelicula2.setDuracion(220);
 			pelicula2.setGenero("Acción");
 			pelicula2.setFechaEstreno(formatear.parse("05-04-2011"));
+			pelicula2.setImagen("power_ranger2.jpg");
+			pelicula2.setEstatus("Actuva");
 			
 			Pelicula pelicula3 = new Pelicula();
 			pelicula3.setId(3);	
@@ -74,10 +76,23 @@ public class HomeController {
 			pelicula3.setDuracion(240);
 			pelicula3.setGenero("Drama");
 			pelicula3.setFechaEstreno(formatear.parse("12-07-2014"));
+			pelicula3.setImagen("elMaquinista.jpg");
+			pelicula3.setEstatus("No activa");
+
+			Pelicula pelicula4 = new Pelicula();
+			pelicula4.setId(4);	
+			pelicula4.setTitulo("RocknRolla");
+			pelicula4.setClasificacion("Z");
+			pelicula4.setDuracion(240);
+			pelicula4.setGenero("Acción");
+			pelicula4.setFechaEstreno(formatear.parse("12-07-1985"));
+			pelicula4.setImagen("rocknrolla.jpg");
+			pelicula4.setEstatus("Activa");
 			
 			lista.add(pelicula1);
 			lista.add(pelicula2);
 			lista.add(pelicula3);
+			lista.add(pelicula4);
 			
 			return lista;
 			

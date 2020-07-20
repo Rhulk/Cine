@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://www.springframework.org/tags"
+prefix="spring"%>
+<spring:url value="/resources" var="urlPublic" />
+<link href="${urlPublic}/css/myStyle.css" rel="stylesheet">
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html ">
 <html>
 <head>
@@ -12,7 +17,7 @@
 <title>Bienvenido a CineApp</title>
 </head>
 <body>
-
+${urlPublic}/images/elMaquinista.jpg
 
 	<%-- 	<ol>
 		<c:forEach items="${peliculas}" var="pelicula">
@@ -45,8 +50,8 @@
 							<th>${pelicula.duracion} min</th>
 							<th>${pelicula.clasificacion}</th>
 							<th>${pelicula.genero}</th>
-							<th>${pelicula.imagen}</th>
-							<th>${pelicula.fechaEstreno}</th>
+							<th><img alt="imag3n" src="${urlPublic }/images/${pelicula.imagen}" width="80" height="120"></th>
+							<th><fmt:formatDate value="${pelicula.fechaEstreno }" pattern="dd-mm-yyyy"/></th>
 							<th>${pelicula.estatus}</th>
 						</tr>
 					</c:forEach>
