@@ -57,7 +57,7 @@ public class HomeController {
 			pelicula1.setClasificacion("B");
 			pelicula1.setDuracion(120);
 			pelicula1.setGenero("Acción");
-			pelicula1.setFechaExtreno(formatear.parse("02-03-2001"));
+			pelicula1.setFechaEstreno(formatear.parse("02-03-2001"));
 			
 			Pelicula pelicula2 = new Pelicula();
 			pelicula2.setId(2);
@@ -65,7 +65,7 @@ public class HomeController {
 			pelicula2.setClasificacion("B");
 			pelicula2.setDuracion(220);
 			pelicula2.setGenero("Acción");
-			pelicula2.setFechaExtreno(formatear.parse("05-04-2011"));
+			pelicula2.setFechaEstreno(formatear.parse("05-04-2011"));
 			
 			Pelicula pelicula3 = new Pelicula();
 			pelicula3.setId(3);	
@@ -73,7 +73,7 @@ public class HomeController {
 			pelicula3.setClasificacion("C");
 			pelicula3.setDuracion(240);
 			pelicula3.setGenero("Drama");
-			pelicula3.setFechaExtreno(formatear.parse("12-07-2014"));
+			pelicula3.setFechaEstreno(formatear.parse("12-07-2014"));
 			
 			lista.add(pelicula1);
 			lista.add(pelicula2);

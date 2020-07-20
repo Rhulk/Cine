@@ -10,7 +10,7 @@ public class Pelicula {
 	private String clasificacion;
 	private String genero;
 	private String imagen ="cineme.jpg";
-	private Date fechaExtreno;
+	private Date fechaEstreno;
 	private String estatus="Activa";
 	
 	public int getId() {
@@ -49,11 +49,11 @@ public class Pelicula {
 	public void setImagen(String imagen) {
 		this.imagen = imagen;
 	}
-	public Date getFechaExtreno() {
-		return fechaExtreno;
+	public Date getFechaEstreno() {
+		return fechaEstreno;
 	}
-	public void setFechaExtreno(Date fechaExtreno) {
-		this.fechaExtreno = fechaExtreno;
+	public void setFechaEstreno(Date fechaEstreno) {
+		this.fechaEstreno = fechaEstreno;
 	}
 	public String getEstatus() {
 		return estatus;
@@ -64,7 +64,7 @@ public class Pelicula {
 	@Override
 	public String toString() {
 		return "Pelicula [id=" + id + ", titulo=" + titulo + ", duracion=" + duracion + ", clasificacion="
-				+ clasificacion + ", genero=" + genero + ", imagen=" + imagen + ", fechaExtreno=" + fechaExtreno
+				+ clasificacion + ", genero=" + genero + ", imagen=" + imagen + ", fechaEstreno=" + fechaEstreno
 				+ ", estatus=" + estatus + "]";
 	}
 	
