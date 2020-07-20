@@ -57,7 +57,7 @@ public class HomeController {
 			pelicula1.setGenero("Acción");
 			pelicula1.setFechaEstreno(formatear.parse("02-03-2001"));
 			pelicula1.setImagen("power_ranger.jpg");
-			pelicula1.setEstatus("activo");
+			pelicula1.setEstatus("Activa");
 			
 			Pelicula pelicula2 = new Pelicula();
 			pelicula2.setId(2);
@@ -67,7 +67,7 @@ public class HomeController {
 			pelicula2.setGenero("Acción");
 			pelicula2.setFechaEstreno(formatear.parse("05-04-2011"));
 			pelicula2.setImagen("power_ranger2.jpg");
-			pelicula2.setEstatus("Actuva");
+			pelicula2.setEstatus("Activa");
 			
 			Pelicula pelicula3 = new Pelicula();
 			pelicula3.setId(3);	

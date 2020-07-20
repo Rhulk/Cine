@@ -52,7 +52,18 @@ ${urlPublic}/images/elMaquinista.jpg
 							<th>${pelicula.genero}</th>
 							<th><img alt="imag3n" src="${urlPublic }/images/${pelicula.imagen}" width="80" height="120"></th>
 							<th><fmt:formatDate value="${pelicula.fechaEstreno }" pattern="dd-mm-yyyy"/></th>
-							<th>${pelicula.estatus}</th>
+							<th>
+							
+								<c:choose>
+									<c:when test="${pelicula.estatus=='Activa' }">
+										<span class="label label-success"> ACTIVA</span>
+									</c:when>
+									<c:otherwise>
+										<span class="label label-danger">INACTIVA</span>
+									</c:otherwise>
+								</c:choose>
+							
+							</th>
 						</tr>
 					</c:forEach>
 				</tbody>
