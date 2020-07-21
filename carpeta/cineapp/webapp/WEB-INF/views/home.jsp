@@ -1,22 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@taglib uri="http://www.springframework.org/tags"
-prefix="spring"%>
-<spring:url value="/resources" var="urlPublic" />
-<link href="${urlPublic}/css/myStyle.css" rel="stylesheet">
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<!DOCTYPE html ">
+<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet"	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-	crossorigin="anonymous">
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Bienvenido a CineApp</title>
+<spring:url value="/resources" var="urlPublic" />
+<link rel="stylesheet"	href="${urlPublic}/bootstrap/css/bootstrap.min.css">
+
 </head>
 <body>
-${urlPublic}/images/elMaquinista.jpg
+${urlPublic}/images/elMaquinista.jpg <br>
+${urlPublic}
 
 	<%-- 	<ol>
 		<c:forEach items="${peliculas}" var="pelicula">
