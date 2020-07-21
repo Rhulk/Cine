@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -40,6 +41,16 @@ public class HomeController {
 		List<Pelicula> peliculas = getLista();
 		vista.addAttribute("peliculas", peliculas);
 		return "home";
+	}
+	
+	@RequestMapping(value = "/detail/{id}", method = RequestMethod.GET)
+	public String mostrarDetalle(@PathVariable("id") int idPelicula, Model vista) {
+		System.out.println("PathVariable: "+idPelicula);
+		List<Pelicula> lista = getLista();
+		
+		vista.addAttribute("pelicula", lista.get(idPelicula));
+		
+		return "detalle";
 	}
 	
 	private List<Pelicula> getLista(){
