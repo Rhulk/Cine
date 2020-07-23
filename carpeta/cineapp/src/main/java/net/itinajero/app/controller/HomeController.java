@@ -6,11 +6,14 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
+import javax.xml.ws.RequestWrapper;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import net.itinajero.app.model.Pelicula;
 import net.itinajero.app.util.Utileria;
@@ -59,6 +62,14 @@ public class HomeController {
 		vista.addAttribute("pelicula", lista.get(idPelicula));
 		
 		return "detalle";
+	}
+	
+	@RequestMapping( value ="/search", method = RequestMethod.POST)
+	public String buscar(@RequestParam("fecha") String fecha) {
+		
+		System.out.println("Fecha: "+fecha);
+		
+		return "home";
 	}
 	
 	private List<Pelicula> getLista(){

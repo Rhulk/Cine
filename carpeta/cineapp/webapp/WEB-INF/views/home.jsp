@@ -13,6 +13,7 @@
     <title>CineSite | Bienvenido</title>
     
 	<spring:url value="/resources" var="urlPublic"></spring:url>
+	<spring:url value="/" var="urlRoot"></spring:url>
     <link href="${urlPublic }/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="${urlPublic }/bootstrap/css/theme.css" rel="stylesheet">
 
@@ -64,7 +65,7 @@
       <div class="row page-header">          
         <div class="col-lg-12">         
           <h2 class="text text-center"><span class="label label-success">EN CARTELERA</span></h2>          
-          <form class="form-inline" action="#" method="post">
+          <form class="form-inline" action="${urlRoot }search" method="post">
             <div class="form-group">
               <label for="fecha">Fecha: </label>
               <select id="fecha" name="fecha" class="form-control">
