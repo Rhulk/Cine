@@ -70,7 +70,14 @@
               <label for="fecha">Fecha: </label>
               <select id="fecha" name="fecha" class="form-control">
               	<c:forEach items="${fechas}" var="fecha">
-                	<option value="${fecha }">${fecha}</option>
+			        <c:choose>
+			  		   <c:when test="${fechaBusqueda eq fecha}" >
+						  <option value="${fecha}" selected>${fecha}</option>	
+					   </c:when>
+					   <c:otherwise>
+						  <option value="${fecha}">${fecha}</option>	
+					   </c:otherwise>
+					</c:choose>	
                 </c:forEach>               
               </select>
             </div>            
