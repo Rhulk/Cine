@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import net.itinajero.app.model.Pelicula;
+import net.itinajero.app.util.Utileria;
 
 @Controller
 public class HomeController {
@@ -41,7 +42,10 @@ public class HomeController {
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String mostrarPrincipal(Model vista) {
 		
+		List<String> listaFechas = Utileria.getNextDays(3);
 		List<Pelicula> peliculas = getLista();
+		
+		vista.addAttribute("fechas", listaFechas);
 		vista.addAttribute("fechaBusqueda", dateFormat.format(new Date()));
 		vista.addAttribute("peliculas", peliculas);
 		return "home";
